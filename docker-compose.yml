@@ -1,0 +1,41 @@
+version: "2"
+services:
+    mongodb:
+        image: mongo
+        container_name: mongodb
+        ports:
+            - "27017:27017"
+        networks:
+            vpcbr:
+                ipv4_address: ${MONGODB_V4}
+
+    mongo-seed:
+        build: ./mongo-seed
+        # image: webmongo.azurecr.io/mongo-seed
+        container_name: mongo-seed
+        links:
+            - mongodb
+        networks:
+            vpcbr:
+                ipv4_address: ${MONGOSEED_V4}
+
+    webapp:
+        build: .
+        # image: webmongo.azurecr.io/webapp
+        container_name: webapp
+        # command: python -u app.py
+        ports:
+            - "5000:5000"
+        links:
+            - mongodb
+        networks:
+            vpcbr:
+                ipv4_address: ${WEBAPP_V4}
+
+networks:
+    vpcbr:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${BRIDGE_SUB}
+                  gateway: ${BRIDGE_GATE}

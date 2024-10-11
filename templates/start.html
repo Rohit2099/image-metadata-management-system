@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filter</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" type="image/png" href="https://colorlib.com/etc/cf/ContactFrom_v1/images/icons/favicon.ico">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.min.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='font-awesome.min.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='animate.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='hamburgers.min.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='select2.min.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='util.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='main.css')}}">
+
+</head>
+<body>
+	<div class="contact1">
+		<div class="container-contact1">
+			<div>
+				<div class="contact1-pic js-tilt" data-tilt="" style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
+					<img src="{{url_for('static',filename='img-01.webp')}}" alt="IMG">
+	
+				</div>
+				<br>
+				<br>
+				<form action="/logout" class="contact1-form validate-form" method="POST">
+					<div class="container-contact1-form-btn">
+						<input type="submit" class="contact1-form-btn" value="Logout" onclick="">
+					</div>
+				</form>
+			</div>
+			<div>
+			<form action="/retrieveImage" class="contact1-form validate-form" method="GET">
+				<span class="contact1-form-title">
+					Enter filters
+				</span>
+				<div class="wrap-input1 validate-input">
+					<span class="shadow-input1"></span>
+					<label for="make" class="input1">Enter the camera make:</label>
+					<select name="make" id="Make" class="input1">
+						<option value="Apple">Apple</option>
+						<option value="samsung" selected>samsung</option>
+						<option value="motorola">motorola</option>
+					</select>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<span class="shadow-input1"></span>
+					<label for="FNumber" class="input1">Enter the aperture:</label>
+					<select name="FNumber" id="FNumber" class="input1">
+						<option value="2.2">2.2</option>
+						<option value="2.0">2.0</option>
+						<option value="1.9" selected>1.9</option>
+					</select>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<span class="shadow-input1"></span>
+					<label for="Height" class="input1">Enter the Height:</label>
+					<select name="Height" id="Height" class="input1">
+						<option value="2322" selected>2322</option>
+						<option value="2448">2448</option>
+						<option value="3456">3456</option>
+						<option value="4608">4608</option>
+					</select>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<span class="shadow-input1"></span>
+					<label for="Width" class="input1">Enter the Width:</label>
+					<select name="Width" id="Width" class="input1">
+						<option value="3456">3456</option>
+						<option value="4608">4608</option>
+						<option value="3264">3264</option>
+						<option value="4128" selected>4128</option>
+					</select>
+				</div>
+				<div class="container-contact1-form-btn">
+					<input type="submit" class="contact1-form-btn" value="Submit" onclick="">
+				</div>
+			</form>
+			<br>
+			<form action="/goback" class="contact1-form validate-form" method="POST">
+				<div class="container-contact1-form-btn">
+					<input type="submit" class="contact1-form-btn" value="Go back" onclick="">
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" async="" src="{{url_for('static',filename='analytics.js.download')}}"></script><script src="{{url_for('static',filename='jquery-3.2.1.min.js.download')}}"></script>
+
+<script src="{{url_for('static',filename='popper.js.download')}}"></script>
+<script src="{{url_for('static',filename='bootstrap.min.js.download')}}"></script>
+
+<script src="{{url_for('static',filename='select2.min.js.download')}}"></script>
+
+<script src="{{url_for('static',filename='tilt.jquery.min.js.download')}}"></script>
+<script>
+	$('.js-tilt').tilt({
+		scale: 1.1
+	})
+</script>
+
+<script async="" src="{{url_for('static',filename='js')}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<script src="{{url_for('static',filename='main.js.download')}}"></script>
+
+
+</body></html>
